@@ -1,0 +1,48 @@
+# 面对网暴 · 专题（公开试读 / 引流版）
+
+把作者在知乎上关于**网络暴力**的多篇回答，重新梳理成一套可翻阅的体系：
+**总论/应对 → 案例库 → 拓展阅读**。
+
+> 当前状态：**v0 试读版**。内容仍在打磨，此处是分组架构与外壳，后续把每个板块做好后直接替换对应目录即可。
+
+## 结构
+
+```
+cyberbullying-handbook/
+  index.html          落地页（总论摘录 + 各篇导航 + 试读 CTA）
+  _shell/
+    style.css         设计系统（墨蓝 + 暖珊瑚）
+    global-nav.js     顶部跨导航 + 底部会员引导条（CTA 占位）
+  pages/
+    cope.html         总论/应对（主回答结构化）
+    cases.html        案例库（5 起事件型案例）
+    read.html         拓展阅读（知乎原文索引 + 观察随笔）
+```
+
+## 交付说明
+
+- 本仓库为 **GitHub Pages 公开托管**，定位「试读 + 引流」。
+- 完整体系（更系统的方法论、更新案例）放会员站（小鹅通/知识星球/独立站），由底部引导条与 CTA 引流。
+- 上线前必改：把 `_shell/global-nav.js` 顶部 `CTA_URL` 与 `index.html` / 各页脚链接，换成真实会员站地址。
+
+## 本地预览
+
+```bash
+cd cyberbullying-handbook
+python3 -m http.server 8080
+# 浏览器打开 http://localhost:8080
+```
+
+## 部署到 GitHub Pages
+
+仓库已含 `.nojekyll`，直接推送 main 分支根目录即可：
+
+```bash
+git add -A && git commit -m "update" && git push
+```
+
+Pages 在仓库 Settings → Pages 选择 `main` / `/(root)` 启用（本仓库首次已由脚本开启）。
+
+## 内容来源
+
+全部内容整理自作者本人知乎回答，版权归作者所有。
